@@ -33,4 +33,12 @@
         app:layout_anchor="@+id/include"
         app:layout_anchorGravity="center" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="282dp"
+        android:layout_height="130dp"
+        android:text="Click me!"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="top|center" />
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

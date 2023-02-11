@@ -13,11 +13,4 @@ public class SecondActivity extends AppCompatActivity {
         setContentView(R.layout.activity_second);
     }
 
-    @Override
-    protected  void onClick(View v) {
-
-        Log.i(TAG, "Button Clicked");
-        Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-        startActivity(intent);
-    }
 }
