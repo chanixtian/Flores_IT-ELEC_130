@@ -1,6 +1,9 @@
 package com.example.myapplication
+import android.widget.Button
+import android.widget.Toast
 
 import android.os.Bundle
+import android.util.Log
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -28,11 +31,27 @@ class MainActivity : AppCompatActivity() {
         appBarConfiguration = AppBarConfiguration(navController.graph)
         setupActionBarWithNavController(navController, appBarConfiguration)
 
-        binding.fab.setOnClickListener { view ->
+        binding.toolbar.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
+
+
+        }
+        val TAG = "MainActivity"
+        Log.v(TAG, "This is a verbose log.")
+
+        Log.i(TAG, "This is an info log.")
+        Log.w(TAG, "This is a warn log.")
+        Log.e(TAG, "This is an error log.")
+
+        // get reference to button
+        val btn_click_me = findViewById(R.id.button6) as Button
+        btn_click_me.setOnClickListener {
+            Log.d(TAG, "This is a debug log.")
         }
     }
+
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
