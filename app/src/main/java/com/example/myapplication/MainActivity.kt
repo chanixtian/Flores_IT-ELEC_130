@@ -26,36 +26,14 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.toolbar)
 
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
-        setupActionBarWithNavController(navController, appBarConfiguration)
-
-        binding.toolbar.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-
-
-        }
-        val TAG = "MainActivity"
-        Log.v(TAG, "This is a verbose log.")
-
-        Log.i(TAG, "This is an info log.")
-        Log.w(TAG, "This is a warn log.")
-        Log.e(TAG, "This is an error log.")
-
-        // get reference to button
-        val btn_click_me = findViewById(R.id.button6) as Button
-        btn_click_me.setOnClickListener {
-            Log.d(TAG, "This is a debug log.")
-        }
-
-        val button = findViewById<Button>(R.id.button2)
+        val button = findViewById<Button>(R.id.send)
         button.setOnClickListener{
             val intent = Intent(this, SecondActivity1::class.java)
             startActivity(intent)
         }
+
+
     }
 
 
@@ -76,9 +54,5 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onSupportNavigateUp(): Boolean {
-        val navController = findNavController(R.id.nav_host_fragment_content_main)
-        return navController.navigateUp(appBarConfiguration)
-                || super.onSupportNavigateUp()
-    }
+
 }
