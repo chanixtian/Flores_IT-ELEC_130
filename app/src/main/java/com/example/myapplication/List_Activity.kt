@@ -11,7 +11,7 @@ import android.widget.Toast
 
 class List_Activity : AppCompatActivity(){
 
-    var array = arrayOf("Android", "Java", "Php", "Hadoop", "Sap", "Python", "Ajax", "C++", "Ruby", "Rails", ".Net", "Perl")
+    var array = arrayOf("Mary Cris", "Frhea", "Klaire", "Yna", "Cheska", "Francheska", "Bendie", "Joeda", "Kristine", "Kristel", "Meia", "Asy")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
